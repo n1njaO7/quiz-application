@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Quiz Application</h1>
+            <p>Test your knowledge!</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+
+        <div class="tabs">
+            <button id="adminTab" class="tab active">
+                Admin Panel
+            </button>
+
+            <button id="userTab" class="tab">
+                Attempt Quiz
+            </button>
+        </div>
+
+
+        <!-- ADMIN PANEL -->
+
+        <section id="adminPanel">
+
+            <h2>Add New Question</h2>
+
+            <form id="questionForm">
+
+                <label>Question</label>
+
+                <input
+                    type="text"
+                    id="questionInput"
+                    placeholder="Enter your question"
+                    required
+                >
+
+                <label>Option A</label>
+                <input type="text" class="optionInput"
+                    placeholder="Enter option A" required>
+
+                <label>Option B</label>
+                <input type="text" class="optionInput"
+                    placeholder="Enter option B" required>
+
+                <label>Option C</label>
+                <input type="text" class="optionInput"
+                    placeholder="Enter option C" required>
+
+                <label>Option D</label>
+                <input type="text" class="optionInput"
+                    placeholder="Enter option D" required>
+
+                <label>Correct Answer</label>
+
+                <select id="correctAnswer" required>
+                    <option value="">Select correct answer</option>
+                    <option value="0">Option A</option>
+                    <option value="1">Option B</option>
+                    <option value="2">Option C</option>
+                    <option value="3">Option D</option>
+                </select>
+
+                <button type="submit" class="primary-btn">
+                    Add Question
+                </button>
+
+            </form>
+
+            <h2>All Questions</h2>
+
+            <div id="adminQuestions"></div>
+
+        </section>
+
+
+        <!-- USER PANEL -->
+
+        <section id="userPanel" class="hidden">
+
+            <!-- Welcome Screen -->
+
+            <div id="quizStart" class="screen">
+
+                <h2>Welcome to the Quiz!</h2>
+
+                <p>
+                    Test your knowledge by answering
+                    multiple-choice questions.
+                </p>
+
+                <button id="startBtn" class="primary-btn">
+                    Start Quiz
+                </button>
+
+            </div>
+
+
+            <!-- Quiz Screen -->
+
+            <div id="quizSection" class="screen hidden">
+
+                <div class="quiz-header">
+
+                    <span id="progress">
+                        Question 1 of 10
+                    </span>
+
+                    <span id="answeredCount">
+                        Answered: 0
+                    </span>
+
+                </div>
+
+                <div class="question-area">
+
+                    <h2 id="questionText"></h2>
+
+                    <div id="optionsContainer"></div>
+
+                </div>
+
+                <div class="navigation">
+
+                    <button id="prevBtn" class="secondary-btn">
+                        Previous
+                    </button>
+
+                    <button id="nextBtn" class="primary-btn">
+                        Next
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Result Screen -->
+
+            <div id="resultSection" class="screen hidden">
+
+                <h2>Quiz Completed!</h2>
+
+                <div class="result-card">
+
+                    <div class="result-item">
+                        <span>Total Questions</span>
+                        <strong id="totalQuestions">0</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Correct Answers</span>
+                        <strong id="correctAnswers">0</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Incorrect Answers</span>
+                        <strong id="incorrectAnswers">0</strong>
+                    </div>
+
+                    <div class="result-item">
+                        <span>Final Score</span>
+                        <strong id="finalScore">0/0</strong>
+                    </div>
+
+                    <div class="percentage-box">
+                        <span>Percentage</span>
+                        <h1 id="percentage">0%</h1>
+                    </div>
+
+                </div>
+
+                <button id="restartBtn" class="primary-btn">
+                    Restart Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

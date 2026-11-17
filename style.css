@@ -1,0 +1,296 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+    padding: 40px 15px;
+    color: #1e293b;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #1e293b;
+}
+
+header p {
+    color: #64748b;
+}
+
+/* Tabs */
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #e2e8f0;
+    font-size: 14px;
+}
+
+.tab.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* Headings */
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+/* Admin Form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+/* Buttons */
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+    padding: 12px 18px;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.secondary-btn {
+    background: #64748b;
+    color: white;
+    padding: 12px 18px;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background: #475569;
+}
+
+/* Utility */
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    width: 100%;
+}
+
+/* Admin Questions */
+
+.question-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 12px 0;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.question-card p {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 9px 13px;
+}
+
+/* Welcome Screen */
+
+#quizStart {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+#quizStart p {
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Quiz Header */
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Question */
+
+.question-area {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#questionText {
+    line-height: 1.5;
+}
+
+/* Options */
+
+.option {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: left;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    color: #1e293b;
+}
+
+.option:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.option.selected {
+    border: 2px solid #2563eb;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.navigation button {
+    flex: 1;
+}
+
+/* Results */
+
+#resultSection {
+    text-align: center;
+}
+
+.result-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.percentage-box {
+    padding: 20px 0 5px;
+}
+
+.percentage-box span {
+    color: #64748b;
+}
+
+.percentage-box h1 {
+    color: #2563eb;
+    margin-top: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .question-area {
+        padding: 15px;
+    }
+
+    .quiz-header {
+        font-size: 12px;
+    }
+
+    .navigation {
+        gap: 8px;
+    }
+
+}
